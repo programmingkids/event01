@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<title>Mario</title>
+<link href="style.css" type="text/css" rel="stylesheet" />
+<script src="enchant.min.js"></script>
+<script src="mario.js"></script>
+<script>
+var Setting = {
+    'images': [
+        './images/mario_right.png',
+        './images/ground.png',
+    ],
+    'backgroundColor': '#7ec0f0',
+    'mario': {
+        'x': 100,
+        'y': 500,
+    }
+};
+
+function moveRight(mario) {
+    mario.speedX = 15;
+    mario.turnImage('right');
+}
+
+function moveLeft(mario) {
+    mario.speedX = 15;
+    mario.turnImage('left');
+}
+
+function jumpUp(mario) {
+    mario.speedY = 15;
+    mario.turnImage('jump');
+}
+
+function jumpDown(mario) {
+    mario.gravity = 0.98;
+}
+</script>
+</head>
+<body></body>
+</html>
