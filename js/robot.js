@@ -24,7 +24,7 @@ var Game = {
         rootScene.on("enter",function(){
             new Ground(Container.core);
             new Robot(Container.core, Setting.robot.x, Setting.robot.y);
-            new Enemy1(Container.core, Container.width/2 , Setting.robot.y);
+            new Enemy1(Container.core, Container.width-100 , Setting.robot.y);
         });
         rootScene.on("enterframe", function() {
             if(Container.core.frame == 90 ) {
